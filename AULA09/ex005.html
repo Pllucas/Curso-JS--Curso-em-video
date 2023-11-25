@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{background-color: rgb(60, 48, 226);
+        color: aliceblue;
+        font: normal 15pt Arial;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Inicianado estudos com DOM </h1>
+    <p>Aqui vai o resultado</p>
+    <P>Aprendendo a usar o <strong>DOM</strong> em JavaScript</P> 
+    <div id = 'msg'>Clique em mim</div> <!-- AQUI FAZEMOS AUTERAÇÕES PARA APLICAR NO <Script>-->
+    <script>
+        window.document.write()
+        /*window.document.write(window.charset) ex. MARCA
+        window.document.write(window.navigator.appName)ex.
+        window.document.write(window.document.URL) ex. MARCA*/
+        var p1 = window.document.getElementsByTagName('p')[0] //0 é o primeiro paragrafo, 1 é o segundo, 2 o terceiro e assim por diante..
+        var corpo = window.document.body
+        window.document.write('Está esrito assim:' + p1.innerText) // ou também pode se usar o innerHTML, que replica IGUAL como está no paragrafo.
+        corpo.style.background = 'purple'
+        //window.alert(p1.innerHTML)
+        p1.style.color = 'black'
+        /*var d = window.document.getElementById('msg') ex. ID
+        d.style.background = 'green'
+        d.innerText = 'estou aguardando...'
+        window.document.getElementById('msg').innerText='Olá!' ex. ID*/
+       /* var d = window.document.getElementsByName('msg')[0]
+        d.innerText = 'Olá!' ex. NAME*/
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'black'
+    </script>
+</body>
+</html>
